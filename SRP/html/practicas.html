@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+    <title>Mantenedor Practica</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand flex" href="#">SIREPRA</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 " >
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./login.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="sedes.html">Sedes</a>
+              </li>
+              <li class="nav-item dropdown">
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#" >Usuarios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#">Practicas</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>      
+    <div class="container ">       
+        <div class="row">
+            <!--Segunda columna-->
+            <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8  cl py-4 bg-white">
+                <h2>Listado de Practicantes</h2>
+                <br><br>
+                <button type="button" id="ingreso" class="btn btn-primary summit">Crear</button>
+                <table class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                            <th class="centrado">ID</th>
+                            <th class="centrado">Rut Alumno</th>
+                            <th class="centrado">Nombre Alumno</th>
+                            <td class="centrado">Carrera</td>
+                            <td class="centrado">Estado Practica</td>
+                            <td class="centrado">Email</td>
+                            <td class="centrado">Fecha Inicio Practica</td>
+                            <td class="centrado">Fecha Termino Practica</td>
+                            <td class="centrado">Acciones</td>                          
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="centrado">1</td>
+                            <td class="centrado">17455680-6</td>
+                            <td class="centrado">21</td>
+                            <td class="centrado">Ing. Civil</td>
+                            <td class="centrado">Activo</td>
+                            <td class="centrado">e.angel@gmail.com</td>
+                            <td class="centrado">12/04/2023</td>
+                            <td class="centrado">12/04/2023</td>
+                            <td>
+                                 <!--Probando-->
+                                 <div  id="editar" class="btn btn-outline-success ">
+                                    Editar
+                                </div>
+                           
+                            </td>                       
+
+                        </tr>
+                        <tr>
+                            <td class="centrado">2</td>
+                            <td class="centrado">14556880-5</td>
+                            <td class="centrado">110</td>
+                            <td class="centrado">Ing. Computacion e Informatica</td>
+                            <td class="centrado">Inactivo</td>
+                            <td class="centrado">d.schaaf@gmail.com</td>
+                            <td class="centrado">12/04/2023</td>
+                            <td class="centrado">12/04/2023</td>
+                            <td>
+                                <div class=" span2 card-footer">
+                                    <div  id="editar" class="btn btn-outline-success ">
+                                        Editar
+                                    </div>
+                                    <div id="eliminar" class="span2 btn btn-outline-info">
+                                        Eliminar
+                                    </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="centrado">3</td>
+                            <td class="centrado">23988001-3</td>
+                            <td class="centrado">45</td>
+                            <td class="centrado">Derecho</td>
+                            <td class="centrado">Activo</td>
+                            <td class="centrado">c.saez@gmail.com</td>
+                            <td class="centrado">12/04/2023</td>
+                            <td class="centrado">12/04/2023</td>
+                            <td>
+                                <div class=" span2 card-footer">
+                                    <div  id="editar" class="btn btn-outline-success ">
+                                        Editar
+                                    </div>
+                                    <div id="eliminar" class="span2 btn btn-outline-info">
+                                        Eliminar
+                                    </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="centrado">4</td>
+                            <td class="centrado">15444666-5</td>
+                            <td class="centrado">31</td>
+                            <td class="centrado">Ing. Industrial</td>
+                            <td class="centrado">Inactivo</td>
+                            <td class="centrado">a.mendez@gmail.com</td>
+                            <td class="centrado">12/04/2023</td>
+                            <td class="centrado">12/04/2023</td>
+                            <td>
+                                <div class=" span2 card-footer">
+                                    <div  id="editar" class="btn btn-outline-success ">
+                                        Editar
+                                    </div>
+                                    <div id="eliminar" class="span2 btn btn-outline-info">
+                                        Eliminar
+                                    </div>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!--modal login-->
+    <div id="modal_editar" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Inicie Session</h5>
+              <button type="button" id="closeModal" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row-fluid span4">
+                    <label class="span2 mr-2" for="usuario"><h6 style="font-family: sans-serif; margin-right: 15px;" >Usuario : </h6></label>
+                    <input type="text" name="usuario" id="User">
+              </div>
+              <br>
+              <div class="row-fluid span4">
+                <div class="col-fluid">
+
+                </div>
+                <label class="span2 mr-2" for="password"><h6 style="font-family:sans-serif">Password : </h6></label>
+                <input type="password" name="password" id="Pas">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" id="cerrarModal" class="btn btn-secondary" aria-label="Close" data-bs-dismiss="modal_editar">Cerrar</button>
+              <button type="button" id="ingreso" class="btn btn-primary summit">Ingresar</button>
+            </div>
+          </div>
+        </div>
+      </div>  
+    <!-- modal crear -->
+    <div id="modal_editar" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Inicie Session</h5>
+              <button type="button" id="closeModal" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="m-0">
+                        <label for="rut" class="form-label">Rut Alumno:</label>
+                        <input type="text" class="form-control" placeholder="XXXXXXXX-X" id="rut_alunombre"  autofocus />
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre Alumno:</label>
+                        <input type="text" class="form-control" id="nombre_alunombre"  autofocus />
+                    </div>
+                    <div class="mb-3">
+                        <label for="email_alumno" class="form-label">Correo Alumno:</label>
+                        <input type="text" class="form-control"  id="email_alumno"  autofocus />
+                    </div>
+                    <div class="mb-3">
+                        <label for="fech_inicio_pract" class="form-label">Fecha Inicio Practica:</label>
+                        <input type="text" class="form-control" placeholder="--/--/----" id="fech_inicio_pract"  autofocus />
+                    </div>
+                    <div class="mb-3">
+                        <label for="term_inicio_pract" class="form-label">Fecha Termino Practica:</label>
+                        <input type="text" class="form-control" placeholder="--/--/----" id="term_inicio_pract"  autofocus />
+                    </div>
+                    <div class="mb-3">
+                        <label for="carrera"  class="form-label">Carrera:</label>
+                        <select>
+                            <option>Ing.Computacion e Informatica</option>
+                            <option>Ing.Industrial</option>
+                            <option>Ing.Civil</option>
+                            <option>Ing.Telecomunicaciones</option>
+                            <option>Derecho</option>
+                            <option>...</option>
+                            
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="estado_practica" class="form-label">Estado Practica:</label>
+                        <select>
+                            <option>Activo</option>
+                            <option>Inactivo</option>
+                        </select>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <div  id="btn_Guardar" class="btn btn-outline-success ">
+                            Guardar
+                        </div>                        
+                        <div id="registro" class="span2 btn btn-outline-info">
+                            Limpiar
+                        </div>
+                    </div>
+                    
+                </form>
+
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" id="cerrarModal" class="btn btn-secondary" aria-label="Close" data-bs-dismiss="modal_editar">Cerrar</button>
+              <button type="button" id="ingreso" class="btn btn-primary summit">Ingresar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+
+    <script>
+        $(document).ready(function () {
+
+
+        $('#editar').click(function(){
+            $('#modal_editar').show();
+        });
+        $('#closeModal').click(function(){
+            $('#modal_editar').hide();
+        });
+        $('#cerrarModal').click(function(){
+            $('#modal_editar').hide();
+        });
+    
+    });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
