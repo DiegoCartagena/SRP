@@ -39,11 +39,11 @@
     <div class="container ">       
         <div class="row">
             <!--Segunda columna-->
-            <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8  cl py-4 bg-white">
+            <div class="col-sm-12 ">
                 <h2>Listado de Practicantes</h2>
                 <br><br>
-                <button type="button" id="ingreso" class="btn btn-primary summit">Crear</button>
-                <table class="table table-dark table-striped">
+                <button type="button" id="ingreso" class="btn btn-outline-primary summit">Crear</button>
+                <table class="table table-ligth ">
                     <thead>
                         <tr>
                             <th class="centrado">ID</th>
@@ -72,6 +72,9 @@
                                  <div  id="editar" class="btn btn-outline-success ">
                                     Editar
                                 </div>
+                                <div id="eliminar" class="span2 btn btn-outline-danger">
+                                    Eliminar
+                                </div>
                            
                             </td>                       
 
@@ -86,11 +89,11 @@
                             <td class="centrado">12/04/2023</td>
                             <td class="centrado">12/04/2023</td>
                             <td>
-                                <div class=" span2 card-footer">
+                                
                                     <div  id="editar" class="btn btn-outline-success ">
                                         Editar
                                     </div>
-                                    <div id="eliminar" class="span2 btn btn-outline-info">
+                                    <div id="eliminar" class="span2 btn btn-outline-danger">
                                         Eliminar
                                     </div>
                             </td>
@@ -105,11 +108,11 @@
                             <td class="centrado">12/04/2023</td>
                             <td class="centrado">12/04/2023</td>
                             <td>
-                                <div class=" span2 card-footer">
+                                
                                     <div  id="editar" class="btn btn-outline-success ">
                                         Editar
                                     </div>
-                                    <div id="eliminar" class="span2 btn btn-outline-info">
+                                    <div id="eliminar" class="span2 btn btn-outline-danger">
                                         Eliminar
                                     </div>
                             </td>
@@ -124,11 +127,11 @@
                             <td class="centrado">12/04/2023</td>
                             <td class="centrado">12/04/2023</td>
                             <td>
-                                <div class=" span2 card-footer">
+                                
                                     <div  id="editar" class="btn btn-outline-success ">
                                         Editar
                                     </div>
-                                    <div id="eliminar" class="span2 btn btn-outline-info">
+                                    <div id="eliminar" class="span2 btn btn-outline-danger">
                                         Eliminar
                                     </div>
                             </td>
@@ -169,12 +172,12 @@
         </div>
       </div>  
     <!-- modal crear -->
-    <div id="modal_editar" class="modal" tabindex="-1">
+    <div id="modal_crear" class="modal" tabindex="-1">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Inicie Session</h5>
-              <button type="button" id="closeModal" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h5 class="modal-title">Crear Practicas</h5>
+              <button type="button" id="closeModalCrear" class="btn-close" data-bs-dismiss="modal_crear" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form>
@@ -192,14 +195,14 @@
                     </div>
                     <div class="mb-3">
                         <label for="fech_inicio_pract" class="form-label">Fecha Inicio Practica:</label>
-                        <input type="text" class="form-control" placeholder="--/--/----" id="fech_inicio_pract"  autofocus />
+                        <input type="date" class="form-control" placeholder="--/--/----" id="fech_inicio_pract"  autofocus />
                     </div>
                     <div class="mb-3">
                         <label for="term_inicio_pract" class="form-label">Fecha Termino Practica:</label>
-                        <input type="text" class="form-control" placeholder="--/--/----" id="term_inicio_pract"  autofocus />
+                        <input type="date" class="form-control" placeholder="--/--/----" id="term_inicio_pract"  autofocus />
                     </div>
                     <div class="mb-3">
-                        <label for="carrera"  class="form-label">Carrera:</label>
+                        <label for="carrera"  class="select form-label">Carrera:</label>
                         <select>
                             <option>Ing.Computacion e Informatica</option>
                             <option>Ing.Industrial</option>
@@ -231,7 +234,7 @@
 
             </div>
             <div class="modal-footer">
-              <button type="button" id="cerrarModal" class="btn btn-secondary" aria-label="Close" data-bs-dismiss="modal_editar">Cerrar</button>
+              <button type="button" id="cerrarModalCrear" class="btn btn-secondary" aria-label="Close" data-bs-dismiss="modal_crear">Cerrar</button>
               <button type="button" id="ingreso" class="btn btn-primary summit">Ingresar</button>
             </div>
           </div>
@@ -244,14 +247,17 @@
         $(document).ready(function () {
 
 
-        $('#editar').click(function(){
-            $('#modal_editar').show();
+        $('.btn-outline-success').click(function(){
+            $('#modal_editar,#modal_crear').show();
         });
-        $('#closeModal').click(function(){
-            $('#modal_editar').hide();
+        $('#closeModal,#closeModalCrear').click(function(){
+            $('#modal_editar,#modal_crear').hide();
         });
-        $('#cerrarModal').click(function(){
-            $('#modal_editar').hide();
+        $('#ingreso').click(function(){
+            $('#modal_crear').show();
+        });
+        $('#cerrarModal,#cerrarModalCrear').click(function(){
+            $('#modal_editar,#modal_crear').hide();
         });
     
     });
